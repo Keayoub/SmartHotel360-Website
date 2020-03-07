@@ -30,7 +30,7 @@ namespace SmartHotel360.PublicWeb
             services.AddOptions();
             services.Configure<LocalSettings>(Configuration);
             services.AddSingleton<SettingsService>( (sp) => SettingsService.Load(sp.GetService<IOptions<LocalSettings>>().Value));
-
+            // Add code from local merge branch
             // Configure SnapshotCollector from application settings
             var t = Configuration.GetSection(nameof(SnapshotCollectorConfiguration));
             services.Configure<SnapshotCollectorConfiguration>(Configuration.GetSection(nameof(SnapshotCollectorConfiguration)));
