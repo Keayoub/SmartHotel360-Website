@@ -24,8 +24,7 @@ namespace SmartHotel360.PublicWeb
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            // Master Branch
+        {          
             services.AddMvc();
             services.AddOptions();
             services.Configure<LocalSettings>(Configuration);
